@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1
-  moveTo: {x: 0, y: 0}
+  moveTo: {fileID: 1581136687}
 --- !u!1 &1581136685
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 1581136687}
   - component: {fileID: 1581136686}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

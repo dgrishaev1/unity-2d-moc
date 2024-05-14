@@ -3,16 +3,19 @@ using UnityEngine;
 public class MoveObject : MonoBehaviour
 {
     [SerializeField] public float movementSpeed = 1f;
-    [SerializeField] private Vector2 moveTo;
+    [SerializeField] private Transform moveTo;
 
     bool isMoving = false;
 
     private void Update()
     {
         var positionFrom = transform.position;
+        var positionTo = moveTo.position;
 
-        bool isInX = positionFrom.x == moveTo.x;
-        bool isInY = positionFrom.y == moveTo.y;
+        if (positionTo == null) return;
+
+        bool isInX = positionFrom.x == positionTo.x;
+        bool isInY = positionFrom.y == positionTo.y;
 
         if (!isInX || !isInY)
         {
@@ -21,13 +24,17 @@ public class MoveObject : MonoBehaviour
             transform.position = Vector2.MoveTowards(
                 positionFrom,
                 new Vector2(
-                    (isInX || !isInY) ? positionFrom.x : moveTo.x,
-                    isInY ? positionFrom.y : moveTo.y
+                    (isInX || !isInY) ? positionFrom.x : positionTo.x,
+                    isInY ? positionFrom.y : positionTo.y
                 ),
                 step
                 );
 
             isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
         }
 
     }
