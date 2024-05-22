@@ -378,7 +378,7 @@ Transform:
   m_GameObject: {fileID: 1251511199}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: -4.5, z: 0}
+  m_LocalPosition: {x: -0, y: -4.5, z: 0}
   m_LocalScale: {x: 0.726, y: 0.726, z: 0.726}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1
-  moveTo: {fileID: 1581136687}
+  moveTo: {fileID: 1363838875}
 --- !u!1 &1363838873
 GameObject:
   m_ObjectHideFlags: 0
